@@ -152,7 +152,8 @@ img {
 }
 
 .site-nav .link,
-.auth-nav .link {
+.auth-nav .mail,
+.auth-nav .tel {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -164,15 +165,18 @@ img {
   color: var(--primary-text-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.link:hover,
+.link:focus,
+.mail:hover,
+.mail:focus,
+.tel:hover,
+.tel:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current,
-.auth-nav .link.current {
+.link.current,
+.mail.current,
+.tel.current {
   color: var(--accent-color);
 }
 
@@ -187,12 +191,13 @@ img {
 .hero {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../imges/img.jpg);
+  background-color: var(--hero-footer-bg-color);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--hero-footer-bg-color);
+  text-align: center;
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  text-align: center;
 }
 
 .hero-title {
@@ -239,12 +244,12 @@ img {
 }
 
 /*----------Feature----------*/
-.feature {
+.feature-list {
   display: flex;
   gap: 30px;
 }
 
-.feature-list {
+.feature-item {
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
@@ -338,12 +343,12 @@ img {
   gap: 10px;
 }
 
-.team-social-icon {
+.team-social-item {
   width: 44px;
   height: 44px;
 }
 
-.team-social {
+.team-social-link {
   width: 100%;
   height: 100%;
   background: var(--top-line-bg-color);
@@ -353,17 +358,17 @@ img {
   align-items: center;
 }
 
-.social-icon {
+.team-social-icon {
   fill: var(--background-icon);
 }
 
-.team-social:hover,
-.team-social:focus {
+.team-social-link:hover,
+.team-social-link:focus {
   background-color: var(--accent-color);
 }
 
-.team-social:hover .social-icon,
-.team-social:focus .social-icon {
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
   fill: var(--top-line-bg-color);
 }
 
@@ -449,7 +454,7 @@ img {
   align-items: baseline;
 }
 
-.footer-social-link {
+.footer-social {
   margin-left: 70px;
 }
 
@@ -475,7 +480,7 @@ img {
   margin-right: 0;
 }
 
-.footer-social-icon {
+.footer-social-link {
   display: block;
   padding: 12px;
   border-radius: 50%;
@@ -483,13 +488,13 @@ img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-icon {
+.footer-social-icon {
   display: block;
   fill: currentColor;
 }
 
-.footer-social-icon:hover,
-.footer-social-icon:focus {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--accent-color);
 }
 
